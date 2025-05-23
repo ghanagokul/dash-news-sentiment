@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tech-news-sentiment
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: GOOGLE_APPLICATION_CREDENTIALS
+        value: include/gcp_key.json

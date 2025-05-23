@@ -11,7 +11,7 @@ from google.cloud import bigquery
 import os
 
 # ✅ Set GCP credentials
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "include/gcp_key.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/etc/secrets/gcp_key.json"
 
 # ✅ Load from BigQuery
 def load_sentiment_data():

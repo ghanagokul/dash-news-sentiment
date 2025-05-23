@@ -123,4 +123,5 @@ app.layout = html.Div(style={
 ])
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))  # Render sets this env var
+    app.run(host="0.0.0.0", port=port, debug=True)  # Bind to 0.0.0.0 so Render can expose it
